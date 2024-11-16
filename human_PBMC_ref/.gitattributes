@@ -1,3 +1,4 @@
 /Users/onkiwong/Documents/GitHub/BIOF3001_Group_project/human_PBMC_ref/* filter=lfs diff=lfs merge=lfs -text
 /Users/onkiwong/Documents/GitHub/BIOF3001_Group_project/human_PBMC_ref/adata/* filter=lfs diff=lfs merge=lfs -text
 /Users/onkiwong/Documents/GitHub/BIOF3001_Group_project/human_PBMC_ref/PBMC_ref_data/* filter=lfs diff=lfs merge=lfs -text
+/Users/onkiwong/Documents/GitHub/BIOF3001_Group_project/human_PBMC_ref/adata/*.pkl filter=lfs diff=lfs merge=lfs -text

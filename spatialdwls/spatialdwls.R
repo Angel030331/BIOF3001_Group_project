@@ -72,3 +72,19 @@ st_obj <- runDWLSDeconv(gobject = st_obj,
                            cluster_column = "leiden_clus",
                            sign_matrix = average_cell_type_expr)
 write.csv(st_obj@spatial_enrichment$DWLS,'SpatialDWLS_seqFISH_10000.csv')
+
+## official spatialDWLS documentation
+##seqFISH+ deconvolution
+# grid_exp<-read.table("../../datasets/simulate_data_seqFISH_plus/simulated_seqFISH_grid_norm_exp.txt",header = 1,row.names = 1)
+# 
+# grid_seqFish <- createGiottoObject(raw_exprs = grid_exp,instructions = instrs)
+# grid_seqFish <- normalizeGiotto(gobject = grid_seqFish)
+# grid_seqFish <- calculateHVG(gobject = grid_seqFish)
+# gene_metadata = fDataDT(grid_seqFish)
+# featgenes = gene_metadata[hvg == 'yes']$gene_ID
+# grid_seqFish <- runPCA(gobject = grid_seqFish, genes_to_use = featgenes, scale_unit = F)
+# signPCA(grid_seqFish, genes_to_use = featgenes, scale_unit = F)
+# grid_seqFish <- createNearestNetwork(gobject = grid_seqFish, dimensions_to_use = 1:10, k = 10)
+# grid_seqFish <- doLeidenCluster(gobject = grid_seqFish, resolution = 0.4, n_iterations = 1000)
+# 
+# grid_seqFish<-runDWLSDeconv(gobject = grid_seqFish,sign_matrix = Sig,n_cell = 20)

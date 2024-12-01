@@ -14,6 +14,7 @@ rcParams['pdf.fonttype'] = 42
 import seaborn as sns
 import time
 import gc
+import argparse
 
 # cellcount = ('raw_somatosensory_sc_exp.txt')
 # sp_data = ('Out_gene_expressions_10000genes.csv')
@@ -148,7 +149,6 @@ def cell2location_benchmarking(cellcount, celltype, sp_data, OUTPUT, PLOT_DIR, A
     result1_percent = result1.div(result1.assign(total=sum_result_1)['total'], axis='index')
     result1_percent.to_csv('q05_gene_expression.csv')
 
-    import argparse
 
 def main():
     parser = argparse.ArgumentParser(description='Cell2location benchmarking')
